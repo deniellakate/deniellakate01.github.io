@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Thousand Suns Couldn't Match Her Warmth</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: white;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #8B0000;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 20px;
+    }
+
+    p {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 1em;
+      font-weight: 200;
+      color: #B22222;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .button {
+      margin-top: 40px;
+      padding: 12px 30px;
+      font-size: 1em;
+      color: white;
+      background-color: #B22222;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      z-index: 1;
+    }
+
+    .button:hover {
+      background-color: #8B0000;
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Generate multiple hearts */
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 25%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 40%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 60%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 75%; animation-delay: 3s; }
+    .heart:nth-child(6) { left: 90%; animation-delay: 5s; }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <h1>A Thousand Suns Couldn't Match Her Warmth</h1>
+  <p>A Mother's Day digital surprise to Ms. Dessie L. Yabo</p>
+
+  <a href="next.html"><button class="button">Begin the Journey</button></a>
+</body>
+</html>
