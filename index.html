@@ -1,82 +1,76 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mother's Day Surprise</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;700&display=swap');body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #b30000, #ff6666);
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  overflow: hidden;
-  position: relative;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;700&display=swap');
 
-.container {
-  text-align: center;
-  padding: 8vh 5vw;
-  position: relative;
-  z-index: 2;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #b30000, #ff6666);
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
 
-h1 {
-  font-size: 3.5em;
-  font-family: 'Great Vibes', cursive;
-  margin-bottom: 10px;
-  color: #fffacd;
-}
+    .container {
+      text-align: center;
+      padding: 10vh 5vw;
+      position: relative;
+      z-index: 2;
+    }
 
-p {
-  font-size: 1.3em;
-  font-weight: 300;
-  color: #ffffff;
-  margin-bottom: 40px;
-}
+    h1 {
+      font-size: 3.5em;
+      font-family: 'Great Vibes', cursive;
+      margin-bottom: 10px;
+      color: #fffacd;
+    }
 
-.start-btn {
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border: none;
-  background-color: #fffacd;
-  color: #b30000;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 250, 205, 0.6);
-}
+    p {
+      font-size: 1.3em;
+      font-weight: 300;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
 
-.start-btn:hover {
-  background-color: #ffe680;
-}
+    .start-btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      background-color: #fffacd;
+      color: #b30000;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 250, 205, 0.6);
+    }
 
-.floral-border {
-  position: absolute;
-  inset: 0;
-  background-image: url(https://github.com/deniellakate/deniellakate01.github.io/blob/19bf6b67967f1fc0a9f62ebee7bfe9ffc8fd7699/IMG_20250416_085459.jpg ); /* Subtle floral pattern */
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.2;
-  z-index: 1;
-}
+    .start-btn:hover {
+      background-color: #ffe680;
+    }
 
-.illustration {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 150px;
-  opacity: 0.8;
-  z-index: 1;
-}
-
+    .floral-border::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent),
+                  radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent);
+      opacity: 0.2;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
-  <div class="floral-border"></div>  <div class="container">
+  <div class="floral-border"></div>
+  <div class="container">
     <h1>A Thousand Suns Couldn't Match a Mother's Warmth</h1>
     <p>A Mother's Day digital surprise to Ms. Dessie L. Yabo</p>
     <button class="start-btn" onclick="location.href='page2.html'">Begin the Journey</button>
-  </div>  <img class="illustration" src="https://i.imgur.com/v1xdkA0.png" alt="Mother and Child Illustration" />
+  </div>
 </body>
 </html>
