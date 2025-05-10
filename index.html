@@ -7,21 +7,23 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;700&display=swap');
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100%;
       background: linear-gradient(to bottom right, #b30000, #ff6666);
       color: white;
       font-family: 'Raleway', sans-serif;
-      overflow: hidden;
-      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .container {
-      text-align: center;
-      padding: 10vh 5vw;
-      position: relative;
-      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
     }
 
     h1 {
@@ -53,20 +55,9 @@
     .start-btn:hover {
       background-color: #ffe680;
     }
-
-    .floral-border::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent),
-                  radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent);
-      opacity: 0.2;
-      z-index: 1;
-    }
   </style>
 </head>
 <body>
-  <div class="floral-border"></div>
   <div class="container">
     <h1>A Thousand Suns Couldn't Match a Mother's Warmth</h1>
     <p>A Mother's Day digital surprise to Ms. Dessie L. Yabo</p>
