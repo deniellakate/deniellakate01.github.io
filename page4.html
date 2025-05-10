@@ -3,107 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Part 4 - The Missing Piece</title>
+  <title>Part 4 - A Piece of My Heart</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fff;
       margin: 0;
-      padding: 40px;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
       text-align: center;
+      color: #333;
     }
-    h2 {
-      color: #b30000;
+
+    video {
+      width: 90%;
+      max-width: 600px;
+      border: 8px solid #f2c2c2;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    .puzzle-area {
-      margin: 30px auto;
-      width: 300px;
-      height: 300px;
-      position: relative;
-      border: 4px solid #ccc;
-      background-image: url('https://i.imgur.com/kJ9TF7w.jpg'); /* Example puzzle background */
-      background-size: cover;
-    }
-    .missing-piece {
-      width: 100px;
-      height: 100px;
-      background-image: url('https://i.imgur.com/kJ9TF7w.jpg'); /* Same image */
-      background-size: 300px 300px;
-      background-position: -200px -200px;
-      position: absolute;
-      top: 320px;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: grab;
-      border: 2px dashed #b30000;
-    }
-    #dropzone {
-      position: absolute;
-      top: 200px;
-      left: 200px;
-      width: 100px;
-      height: 100px;
-      border: 2px dashed transparent;
-    }
-    .message {
+
+    .caption {
+      margin-top: 20px;
       font-size: 1.2em;
-      color: green;
-      margin-top: 20px;
+      color: #b30000;
+      font-weight: bold;
     }
+
     .next-btn {
-      margin-top: 20px;
-      padding: 10px 25px;
+      margin-top: 30px;
+      padding: 12px 28px;
       background-color: #b30000;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      display: none;
     }
+
     .next-btn:hover {
       background-color: #800000;
     }
   </style>
 </head>
 <body>
-  <h2>The Missing Piece</h2>
-  <p>Drag the missing puzzle piece to its place…</p>
 
-  <div class="puzzle-area">
-    <div id="dropzone"></div>
-  </div>
-  <div id="piece" class="missing-piece" draggable="true"></div>
+  <h2>A Special Message from Me to You</h2>
+  
+  <video controls>
+    <source src="lv_7502344544348851517_20250511022254_022512.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <div id="message" class="message"></div>
-  <button id="nextBtn" class="next-btn" onclick="location.href='page5.html'">Continue</button>
+  <div class="caption">"Because words alone aren’t enough, I made this just for you."</div>
 
-  <script>
-    const piece = document.getElementById('piece');
-    const dropzone = document.getElementById('dropzone');
-    const message = document.getElementById('message');
-    const nextBtn = document.getElementById('nextBtn');
+  <button class="next-btn" onclick="location.href='page5.html'">Continue</button>
 
-    piece.addEventListener('dragstart', (e) => {
-      e.dataTransfer.setData('text/plain', 'puzzle-piece');
-    });
-
-    dropzone.addEventListener('dragover', (e) => {
-      e.preventDefault();
-    });
-
-    dropzone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      const data = e.dataTransfer.getData('text/plain');
-      if (data === 'puzzle-piece') {
-        dropzone.appendChild(piece);
-        piece.style.position = 'relative';
-        piece.style.top = '0';
-        piece.style.left = '0';
-        piece.style.cursor = 'default';
-        message.textContent = 'Perfect! You’re the missing piece, Mama.';
-        nextBtn.style.display = 'inline-block';
-      }
-    });
-  </script>
 </body>
 </html>
